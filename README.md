@@ -1,18 +1,11 @@
 readme_content = """
 
-1. Sales Data Analysis and Prediction System
-
-**Author:** Dharmesh  
-**Institution:** MITS College  
-
----
-
-2. Introduction
+1. Introduction:-
 The **Sales Data Analysis and Prediction System** is a data-driven application that analyzes sales data to uncover trends, visualize key insights, and predict future sales using machine learning. The project is built using **Python**, **Pandas**, **Matplotlib**, and **Streamlit** for interactive dashboards.
 
 ---
 
-3. Objectives
+2. Objectives:-
 - To analyze and visualize historical sales data.  
 - To identify patterns and key performance indicators (KPIs).  
 - To predict future sales using machine learning models.  
@@ -20,18 +13,18 @@ The **Sales Data Analysis and Prediction System** is a data-driven application t
 
 ---
 
-4. Problem Statement
+3. Problem Statement:-
 Businesses generate huge amounts of sales data daily. However, without proper analysis, valuable insights remain hidden. Manual reporting is time-consuming and error-prone. A system that automates analysis and forecasting helps businesses make data-driven decisions efficiently.
 
 ---
 
-5. Proposed Solution
+4. Proposed Solution:-
 The proposed system automates the entire sales data workflow — from preprocessing and visualization to predictive modeling — using **Python** and **Streamlit**.  
 It reads sales data, cleans and transforms it, performs **EDA (Exploratory Data Analysis)**, and applies machine learning algorithms to predict future sales trends.  
 
 ---
 
-6. System Architecture
+5. System Architecture:-
 The system architecture consists of the following components:
 1. **Data Layer** – Contains raw sales data (e.g., `superstore.csv`).
 2. **Processing Layer** – Handles data cleaning, transformation, and preprocessing using `pandas` and `numpy`.
@@ -41,7 +34,7 @@ The system architecture consists of the following components:
 
 ---
 
-7. Project Modules
+6. Project Modules:-
 1. **Data Preprocessing Module**
    - Cleans and formats raw data.  
    - Handles missing values and encodes categorical data.
@@ -54,7 +47,7 @@ The system architecture consists of the following components:
 
 ---
 
-7. Key Features
+7. Key Features:-
 - Automated data cleaning and encoding.  
 - Interactive visualizations of region-wise and category-wise sales.  
 - Predictive insights using machine learning.  
@@ -70,7 +63,7 @@ The system architecture consists of the following components:
 
 ---
 
-9. Applications
+9. Applications:-
 - Retail and E-commerce sales forecasting.  
 - Business Intelligence and performance tracking.  
 - Inventory and resource planning systems.  
@@ -78,7 +71,7 @@ The system architecture consists of the following components:
 
 ---
 
-10. Future Scope
+10. Future Scope:-
 - Integration of advanced machine learning models like XGBoost or LSTM.  
 - Real-time data ingestion via APIs.  
 - Automated report generation in PDF/Word format.  
@@ -86,7 +79,7 @@ The system architecture consists of the following components:
 
 ---
 
-11. References
+11. References:-
 - Python official documentation: [https://docs.python.org/3] 
 - Pandas documentation: [https://pandas.pydata.org] 
 - Streamlit documentation: [https://streamlit.io]
