@@ -26,24 +26,24 @@ It reads sales data, cleans and transforms it, performs **EDA (Exploratory Data 
 
 5. System Architecture:-
 The system architecture consists of the following components:
-1. **Data Layer** – Contains raw sales data (e.g., `superstore.csv`).
-2. **Processing Layer** – Handles data cleaning, transformation, and preprocessing using `pandas` and `numpy`.
-3. **Analytics Layer** – Performs data visualization and trend analysis.
-4. **Prediction Layer** – Trains and applies ML models for forecasting.
-5. **Presentation Layer** – Displays results via a Streamlit dashboard.
+   1. **Data Layer** – Contains raw sales data (e.g., `superstore.csv`).
+   2. **Processing Layer** – Handles data cleaning, transformation, and preprocessing using `pandas` and `numpy`.
+   3. **Analytics Layer** – Performs data visualization and trend analysis.
+   4. **Prediction Layer** – Trains and applies ML models for forecasting.
+   5. **Presentation Layer** – Displays results via a Streamlit dashboard.
 
 ---
 
 6. Project Modules:-
-1. **Data Preprocessing Module**
-   - Cleans and formats raw data.  
-   - Handles missing values and encodes categorical data.
-2. **EDA Visualization Module**
-   - Creates charts (bar, line, pie) to identify sales patterns.  
-3. **Prediction Module**
-   - Uses regression models to predict future sales.  
-4. **Dashboard Module**
-   - Built with Streamlit for user interaction and visualization.
+   1. **Data Preprocessing Module**
+      - Cleans and formats raw data.  
+      - Handles missing values and encodes categorical data.
+   2. **EDA Visualization Module**
+      - Creates charts (bar, line, pie) to identify sales patterns.  
+   3. **Prediction Module**
+      - Uses regression models to predict future sales.  
+   4. **Dashboard Module**
+      - Built with Streamlit for user interaction and visualization.
 
 ---
 
