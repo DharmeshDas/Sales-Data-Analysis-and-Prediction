@@ -1,0 +1,50 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+*.sqlite3
+
+# --- Environment files ---
+.env
+.venv/
+env/
+venv/
+ENV/
+venv.bak/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+
+# --- VS Code ---
+.vscode/
+.settings/
+
+# --- Data files ---
+data/*.csv
+data/*.xlsx
+data/*.json
+data/*.zip
+
+# --- Streamlit cache ---
+.streamlit/
+.streamlit/cache/
+.streamlit/secrets.toml
+
+# --- Reports and temporary files ---
+*.docx
+*.pdf
+*.tmp
+*.bak
+
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Build and distribution ---
+build/
+dist/
+*.egg-info/
