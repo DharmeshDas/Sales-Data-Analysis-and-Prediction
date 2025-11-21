@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go 
 
-# --- 1. Model Evaluation Function ---
+# --- 1. Model Evaluation Function ----
 
 def evaluate_model(y_true, y_pred, model_name="Prophet"):
     """
