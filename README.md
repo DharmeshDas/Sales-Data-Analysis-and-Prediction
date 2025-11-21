@@ -85,3 +85,67 @@ The system architecture consists of the following components:
 - Streamlit documentation: [https://streamlit.io]
 - Matplotlib and Scikit-learn documentation  
 """
+📁 Project Structure:-
+
+├── data_loader.py          # Loads and validates input dataset
+├── data_preprocessing.py   # Handles missing values, encoding, and scaling
+├── eda_visualization.py    # Generates EDA visualizations
+├── sales_prediction.py     # Prophet-based sales forecasting
+├── utils.py                # Helper methods
+├── main.py                 # Orchestrates pipeline execution
+├── app.py                  # Streamlit dashboard
+└── requirements.txt        # Dependencies
+
+🚀 Features:-
+
+Data Cleaning & Transformation
+EDA with Visual Insights
+Time Series Forecasting (Prophet)
+Interactive Dashboard with KPI Metrics
+Export Reports & Forecasted Data
+Region, Category, and Time Filtering
+
+🔧 Tech Stack:-
+
+Component	Technology
+Programming	Python
+Framework	Streamlit
+Forecasting	Prophet
+Data Handling	Pandas
+Visualization	Plotly
+Deployment	Local/Web
+
+📊 How It Works:-
+
+Load Data: Using data_loader.py
+Preprocess: Cleaning & transformation
+EDA: Visual trend analysis using charts
+Forecast: Prophet predicts future sales
+Dashboard: User selects filters & views insights
+
+▶ Run the Application:-
+
+pip install -r requirements.txt
+streamlit run app.py
+
+📦 Dependencies:-
+
+pandas
+numpy
+matplotlib
+plotly
+streamlit
+prophet
+scikit-learn
+
+Install via:
+pip install -r requirements.txt
+
+📈 KPIs Displayed:-
+
+Total Sales
+Profit Ratio
+Forecasted Revenue
+Top Performing Region & Category
+=======
+
