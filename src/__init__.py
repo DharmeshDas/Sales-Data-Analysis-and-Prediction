@@ -8,4 +8,4 @@ This package contains all the core modules for:
 - Utility functions
 """
 
-__all__ = ["data_preprocessing", "eda_visualization", "sales_prediction", "utils"]
+__all__ = ["data_preprocessing", "eda_visualization", "sales_prediction", "utils", "data_loader"]

@@ -48,3 +48,66 @@ desktop.ini
 build/
 dist/
 *.egg-info/
+
+# Logs
+*.log
+
+# ----- OS Files -----
+.DS_Store
+Thumbs.db
+
+# ----- IDE Files -----
+.vscode/
+.idea/
+
+# ----- Environment Variables -----
+*.env
+
+# ----- Streamlit -----
+.streamlit/secrets.toml
+
+
+
+
+
+# ----- Model Files -----
+models/
+*.sav
+*.h5
+*.joblib
+
+# ----- Cache -----
+.cache/
+*.cache
+logs/
+
+# ----- Prophet / Forecast ---
+forecast_output/
+predictions/
+*.fbprophet
+fbprophet/
+
+# ----- Temporary & Exported Files -----
+export/
+reports/
+*.pdf
+*.docx
+*.zip
+
+# ----- Build & Distribution -----
+dist/
+build/
+*.egg-info/
+
+# ----- Deployment -----
+*.db
+*.sqlite3
+*.sqlite
+
+# ----- Optional ignore for pyinstaller or executables -----
+*.spec
+*.exe
+*.dll
+
+# ----- VSCode Workspace -----
+*.code-workspace

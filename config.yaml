@@ -1,0 +1,14 @@
+# configuration for sales-analysis-system
+# --- PATHS ---
+DATA_PATH: "data/superstore.csv" 
+MODEL_OUTPUT_DIR: "reports/models/"
+
+# --- DATA COLUMNS ---
+DATE_COL: "Order Date"
+SALES_COL: "Sales"
+PROFIT_COL: "Profit"
+
+# --- MODELING PARAMETERS (Prophet) ---
+MODEL_NAME: "Prophet"
+TEST_SIZE_MONTHS: 12
+FORECAST_PERIOD_DAYS: 90

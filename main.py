@@ -1,43 +1,83 @@
 import pandas as pd
-import chardet
-from src.data_preprocessing import preprocess_data
-from src.eda_visualization import perform_eda
-from src.sales_prediction import predict_sales
+import os
+import sys
 
-def read_csv_safely(file_path):
-    """
-    Reads a CSV file safely, handling encoding issues automatically.
-    """
-    try:
-        df = pd.read_csv(file_path, encoding='utf-8')
-    except UnicodeDecodeError:
-        try:
-            print("UTF-8 failed, retrying with Latin-1 encoding...")
-            df = pd.read_csv(file_path, encoding='latin1')
-        except UnicodeDecodeError:
-            print("Both UTF-8 and Latin-1 failed. Detecting encoding automatically...")
-            with open(file_path, 'rb') as f:
-                result = chardet.detect(f.read(10000))
-                detected_encoding = result['encoding']
-                print(f"Detected encoding: {detected_encoding}")
-                df = pd.read_csv(file_path, encoding=detected_encoding)
-    print("CSV loaded successfully!")
-    return df
+# 1. Core Imports from the src/ directory
+from src.utils import load_config
+from src.data_loader import load_raw_data
+
+# Business logic modules
+from src.data_preprocessing import preprocess_for_ts, add_time_features
+from src.eda_visualization import perform_eda
+
+#FIX: Import the new prediction function name, 'prophet_predict'
+from src.sales_prediction import prophet_predict 
+
 
 def main():
+    """
+    Main entry point for batch execution (CLI/Reporting).
+    Orchestrates the data analysis and prediction pipeline.
+    """
+    print("=====================================================")
     print("Starting Sales Data Analysis and Prediction System...")
-    df = read_csv_safely("data/superstore.csv")
+    print("=====================================================")
 
-    # Step 1: Clean and preprocess
-    df = preprocess_data(df)
+    # 1. Load Configuration
+    try:
+        config = load_config(config_path='config.yaml')
+        print("Configuration loaded successfully.")
+    except FileNotFoundError as e:
+        print(f"FATAL ERROR: {e}. Please ensure config.yaml exists in the root folder.")
+        sys.exit(1)
+    
+    # 2. Load Data
+    df_raw = load_raw_data(config).copy()
 
-    # Step 2: Perform EDA
-    perform_eda(df)
+    if df_raw.empty:
+        print("Data loading failed. Exiting pipeline.")
+        sys.exit(1)
 
-    # Step 3: Predict Sales
-    predict_sales(df)
+    # --- Data Preparation ---
+    date_col = config.get('DATE_COL', 'Order Date')
+    sales_col = config.get('SALES_COL', 'Sales')
+    
+    # 3a. Prepare data for EDA (adds Month/Year columns needed by eda_visualization)
+    df_eda = add_time_features(df_raw, date_col)
+    
+    # 3b. Prepare data specifically for Time Series (Prophet model)
+    # df_ts is in the 'ds'/'y' format
+    df_ts = preprocess_for_ts(
+        df_raw.copy(), 
+        date_col, 
+        sales_col
+    )
+    
+    # --- Execute Business Logic ---
+    
+    # 4. Perform Exploratory Data Analysis (EDA)
+    perform_eda(df_eda)
 
-    print("Project executed successfully!")
+    # 5. Predict Sales (Now using the advanced Prophet function)
+    print("\nStarting Advanced Time Series Prediction...")
+    
+    #FIX: Call the new function, pass the time-series data (df_ts), and read parameters from config
+    model, forecast, metrics = prophet_predict(
+        df_ts=df_ts, 
+        forecast_days=config.get('FORECAST_PERIOD_DAYS', 90), # Read from config
+        test_size_months=config.get('TEST_SIZE_MONTHS', 12)    # Read from config
+    )
+    
+    # Optional: Save forecast plot for reporting purposes
+    # from src.sales_prediction import plot_forecast
+    # fig = plot_forecast(model, forecast)
+    # fig.write_image("reports/figures/sales_forecast.png")
+
+
+    print("=====================================================")
+    print("Project execution completed successfully!")
+    print("=====================================================")
+
 
 if __name__ == "__main__":
     main()

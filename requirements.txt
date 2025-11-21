@@ -4,10 +4,9 @@ matplotlib
 seaborn
 scikit-learn
 streamlit
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-streamlit
 chardet
+reportlab
+prophet
+yaml
+plotly
+sklearn
