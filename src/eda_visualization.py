@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
+
 def perform_eda(df, output_dir="reports/figures"):
     """
     Performs Exploratory Data Analysis and saves the generated figures to disk.
