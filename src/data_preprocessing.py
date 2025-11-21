@@ -7,7 +7,7 @@ def preprocess_for_ts(df, date_col, sales_col):
     """
     print("Preparing data for time series prediction...")
     
-    # 1. Convert to datetime, drop rows with invalid dates
+    #  1. Convert to datetime, drop rows with invalid dates
     df[date_col] = pd.to_datetime(df[date_col], errors='coerce')
     df.dropna(subset=[date_col, sales_col], inplace=True)
 
