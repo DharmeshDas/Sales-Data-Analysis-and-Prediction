@@ -107,30 +107,30 @@ The system architecture consists of the following components:
 
 🚀 Features:-
 
-Data Cleaning & Transformation
-EDA with Visual Insights
-Time Series Forecasting (Prophet)
-Interactive Dashboard with KPI Metrics
-Export Reports & Forecasted Data
-Region, Category, and Time Filtering
+1.Data Cleaning & Transformation
+2.EDA with Visual Insights
+3.Time Series Forecasting (Prophet)
+4.Interactive Dashboard with KPI Metrics
+5.Export Reports & Forecasted Data
+6.Region, Category, and Time Filtering
 
 🔧 Tech Stack:-
 
-Component	Technology
-Programming	Python
-Framework	Streamlit
-Forecasting	Prophet
-Data Handling	Pandas
-Visualization	Plotly
-Deployment	Local/Web
+1.Component	Technology
+2.Programming	Python
+3.Framework	Streamlit
+4.Forecasting	Prophet
+5.Data Handling	Pandas
+6.Visualization	Plotly
+7.Deployment	Local/Web
 
 📊 How It Works:-
 
-Load Data: Using data_loader.py
-Preprocess: Cleaning & transformation
-EDA: Visual trend analysis using charts
-Forecast: Prophet predicts future sales
-Dashboard: User selects filters & views insights
+1.Load Data: Using data_loader.py
+2.Preprocess: Cleaning & transformation
+3.EDA: Visual trend analysis using charts
+4.Forecast: Prophet predicts future sales
+5.Dashboard: User selects filters & views insights
 
 ▶ Run the Application:-
 
@@ -139,23 +139,23 @@ streamlit run app.py
 
 📦 Dependencies:-
 
-pandas
-numpy
-matplotlib
-plotly
-streamlit
-prophet
-scikit-learn
+1.pandas
+2.numpy
+3.matplotlib
+4.plotly
+5.streamlit
+6.prophet
+7.scikit-learn
 
 Install via:
 pip install -r requirements.txt
 
 📈 KPIs Displayed:-
 
-Total Sales
-Profit Ratio
-Forecasted Revenue
-Top Performing Region & Category
+1.Total Sales
+2.Profit Ratio
+3.Forecasted Revenue
+4.Top Performing Region & Category
 
 =======
 
