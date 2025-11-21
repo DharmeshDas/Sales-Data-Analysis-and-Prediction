@@ -11,7 +11,6 @@ def read_csv_safely(file_path):
     """
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"Data file not found at: {file_path}")
-
     try:
         df = pd.read_csv(file_path, encoding='utf-8')
     except UnicodeDecodeError:
