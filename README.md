@@ -85,15 +85,24 @@ The system architecture consists of the following components:
 - Streamlit documentation: [https://streamlit.io]
 - Matplotlib and Scikit-learn documentation  
 """
+
+
 📁 Project Structure:-
 
 ├── data_loader.py          # Loads and validates input dataset
+
 ├── data_preprocessing.py   # Handles missing values, encoding, and scaling
+
 ├── eda_visualization.py    # Generates EDA visualizations
+
 ├── sales_prediction.py     # Prophet-based sales forecasting
+
 ├── utils.py                # Helper methods
+
 ├── main.py                 # Orchestrates pipeline execution
+
 ├── app.py                  # Streamlit dashboard
+
 └── requirements.txt        # Dependencies
 
 🚀 Features:-
