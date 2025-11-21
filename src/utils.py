@@ -24,10 +24,6 @@ def numerize_value(value):
     """
     A placeholder for a utility function (e.g., to format large numbers for KPIs).
     
-    Example: 1250000 -> 1.25M
-    You can install 'numerize' package and replace the logic here:
-    from numerize import numerize
-    return numerize.numerize(value)
     """
     if abs(value) >= 1_000_000:
         return f"{value / 1_000_000:.2f}M"
